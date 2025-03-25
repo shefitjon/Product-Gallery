@@ -1,0 +1,17 @@
+<?php
+/**
+ * 
+ * @package Skianet_ProductGallery
+ */
+
+/**
+ * @var $block \Skianet\ProductGallery\Block\Gallery
+ */
+?>
+<div id="gallery-container" class="product-media" data-mage-init='{ "Skianet/productGallery": { "initialImages": <?= $block->getJsImages() ?> } }'>
+    <div id="product-gallery-images">
+        <?php foreach ($block->getProductImages() as $image): ?>
+            <img src="<?= $image['img'] ?>" alt="<?= $image['caption'] ?>"/>
+        <?php endforeach; ?>
+    </div>
+</div>
